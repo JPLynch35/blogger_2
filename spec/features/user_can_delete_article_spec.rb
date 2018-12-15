@@ -8,7 +8,7 @@ describe 'a user' do
     end
     it 'can delete an article' do
       visit article_path(@article_1)
-      click_on 'Delete Article'
+      click_on 'Delete'
 
       expect(current_path).to eq(articles_path)
       expect(Article.count).to eq(1)

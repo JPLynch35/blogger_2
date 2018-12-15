@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'a user' do
-  describe 'visits articles index page' do
+  describe 'visiting articles index page' do
     before :each do
       @article_1 = Article.create(title: 'Title_1', body: 'Body_1')
       @article_2 = Article.create(title: 'Title_2', body: 'Body_2')

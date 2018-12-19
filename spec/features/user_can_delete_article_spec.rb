@@ -12,8 +12,10 @@ describe 'a user' do
 
       expect(current_path).to eq(articles_path)
       expect(Article.count).to eq(1)
-      expect(page).to have_content(@article_2.title)
-      expect(page).to_not have_content(@article_1.title)
+      within('#article-list') do
+        expect(page).to have_content(@article_2.title)
+        expect(page).to_not have_content(@article_1.title)
+      end
     end
   end
 end

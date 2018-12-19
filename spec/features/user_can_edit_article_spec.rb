@@ -19,7 +19,7 @@ describe 'a user' do
       click_on 'Update Article'
 
       expect(current_path).to eq(article_path(article_1))
-      expect(page).to have_content('Article successfully updated!')
+      expect(page).to have_content("Article This is an updated article title! updated!")
       expect(page).to have_content('This is an updated article title!')
       expect(page).to have_content(article_1.body)
     end
